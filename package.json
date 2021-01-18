@@ -25,26 +25,23 @@
     "lint:js": "eslint . --ext .js,.jsx",
     "lint:js:fix": "npm run lint:js -- --fix"
   },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint . --fix", "git add"
-    ],
-    "src/**/*.scss": [
-      "stylelint --syntax scss --fix", "git add"
-    ],
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  
   "browserslist": {
     "production": [
       ">0.2%",
