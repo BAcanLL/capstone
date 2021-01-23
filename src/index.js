@@ -4,15 +4,10 @@ import "./index.css";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import RootStore from "./store/Store";
-
-export const StoreContext = React.createContext();
 
 ReactDOM.render(
   <React.StrictMode>
-    <StoreContext.Provider value={RootStore}>
-      <App />
-    </StoreContext.Provider>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
