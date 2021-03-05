@@ -1,4 +1,4 @@
-import PatientOverview from "../components/patientOverview";
+import PatientOverview from "../components/ProfilePage/patientOverview";
 
 const Template = () => <PatientOverview />;
 

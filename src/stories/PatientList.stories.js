@@ -1,4 +1,4 @@
-import PatientList from "../components/Sidebar";
+import PatientList from "../components/Sidebar/Sidebar";
 
 const Template = () => <PatientList />;
 
