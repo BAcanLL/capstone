@@ -8,6 +8,14 @@ export const COLORS = {
   grey: "#C4C4C4",
   lightGrey: "#F2F2F2",
   darkGrey: "#5F5F5F",
+  graph: {
+    HRV: "#8976FF",
+    HR: "#FFDD65",
+    pNN50: "#54CCFF",
+    NN50: "#FF9C54",
+    LF: "#5AE97A",
+    anomalies: "#FB51CB",
+  },
 };
 
 COLORS.primary = COLORS.green;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import AlphabetItem from "./AlphabetItem";
-import "../index.css";
 
 const mapArrToMap = (arr) => {
   const map = new Map();

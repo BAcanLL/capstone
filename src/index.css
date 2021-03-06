@@ -5,6 +5,7 @@ body {
   font-family: "Asap", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
 }
 
 * {
@@ -25,6 +26,14 @@ body {
   src: local('Asap-Italic'), url(../src/styles/fonts/Asap-Italic.ttf) format('ttf');
 } */
 
+button {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0;
+  display: flex;
+}
+
 .body {
   font-family: "Asap";
 }
@@ -32,6 +41,26 @@ body {
 .sidebar {
   list-style: none;
   color: white;
+  height: 100%;
+}
+
+.rowOne {
+  width: 100%;
+}
+
+.one {
+  width: 260px;
+}
+.two {
+  width: 550px;
+}
+
+.three {
+  width: 250px;
+}
+
+.five {
+  width: 700px;
 }
 
 .patientSearchInput {
@@ -53,8 +82,9 @@ body {
   background-color: white;
   padding: 13px;
   font-size: 12px;
-  color: #5f5f5f;
+  color: #484848;
   display: inline-block;
+  height: 150px;
 }
 
 .profileBlockTitle {
@@ -74,3 +104,27 @@ body {
 tr {
   height: 25px !important;
 }
+
+.bigMetric {
+  font-size: 54px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.subtitle {
+  color: #c4c4c4;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.green {
+  color: #3adeb7;
+}
+
+.pink {
+  color: #fb51cb;
+}
+
+/* .background-grey {
+  background-color: #F2F2F2 !important;
+} */

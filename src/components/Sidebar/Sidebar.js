@@ -1,10 +1,9 @@
 import React from "react";
 import Sidebar from "react-sidebar";
-import "../index.css";
-import { COLORS } from "../styles/colours";
+import { COLORS } from "../../styles/colours";
 import AlphabetList from "./AlphabetList";
-import BrandWhite from "./BrandWhite.png";
-import Asap from "../index.css";
+import BrandWhite from "../BrandWhite.png";
+import "../../index.css";
 
 const patients = [
   "Max Abdullah",
@@ -27,16 +26,6 @@ const patientObjs = [
   { firstName: "Rebecca", lastName: "Cadwell" },
 ];
 patientObjs.sort((a, b) => (a.lastName > b.lastName ? 1 : -1));
-
-let patientDisplayList = [];
-let alphabet = new Set();
-let processList = (patients) => {
-  for (var i = 0; i < patients.length; i++) {}
-};
-
-// var patientList = patients.map((patient) =>
-//     <li style={{marginBottom: 15}}>{patient}</li>
-// )
 
 class PatientList extends React.Component {
   constructor(props) {
@@ -64,28 +53,32 @@ class PatientList extends React.Component {
             paddingLeft: 5,
             padding: 6,
             fontSize: 11,
-            fontFamily: Asap,
           }}
           key="random1"
           placeholder={"Search..."}
-          //  onChange={(e) => setKeyword(e.target.value)}
         />
         <AlphabetList
           data={patients}
           style={{ paddingTop: 12 }}
           generateFn={(item, index) => {
             return (
-              <div
-                style={{ fontFamily: Asap, paddingTop: 6, paddingBottom: 6 }}
-                key={item}
-              >
+              <button style={{ paddingTop: 6, paddingBottom: 6 }} key={item}>
                 {item}
-              </div>
+              </button>
             );
           }}
         />
       </div>
     );
+  }
+
+  componentDidMount() {
+    var url = new URL("https://capstone-server-404.herokuapp.com/therapists/");
+    var params = { email: "drjohn@example.com", password: "password" };
+    url.search = new URLSearchParams(params).toString();
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => console.log("This is your data", data));
   }
 
   onSetSidebarOpen(open) {
@@ -97,6 +90,7 @@ class PatientList extends React.Component {
       <Sidebar
         sidebar={this.patientList}
         docked={true}
+        transitions={false}
         // sidebar={<ul style={{listStyle: 'none'}}>{patientList}</ul>}
         open={this.state.sidebarOpen}
         onSetOpen={this.onSetSidebarOpen}
@@ -106,7 +100,7 @@ class PatientList extends React.Component {
             paddingRight: 10,
             color: "white",
             fontSize: 12,
-            width: 210,
+            width: 230,
           },
         }}
         class="sidebar"
