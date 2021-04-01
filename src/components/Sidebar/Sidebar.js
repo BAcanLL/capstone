@@ -7,16 +7,17 @@ import "../../index.css";
 
 const patients = [
   "Max Abdullah",
-  "Allison, Allvares",
-  "Huang, Steven",
-  "Hatter, Mad",
-  "Harry, Potter",
+  "Allison Alvares",
+  "Avril Lee",
+  "Michael Brooks",
+  "Harry Evans",
+  "Hannah Turco",
   "Lori Barker",
   "Katniss Everdeen",
   "Sally Barker",
+  "Christina Lin",
   "Alyson Brown",
-  "Cadwell, Rebecca",
-  "Curie, Marie",
+  "Lillian Zhang",
 ];
 
 const patientObjs = [
@@ -62,7 +63,11 @@ class PatientList extends React.Component {
           style={{ paddingTop: 12 }}
           generateFn={(item, index) => {
             return (
-              <button style={{ paddingTop: 6, paddingBottom: 6 }} key={item}>
+              <button
+                className={`${item == "Lori Barker" ? "selectedButton" : ""}`}
+                style={{ paddingTop: 8, paddingBottom: 8 }}
+                key={item}
+              >
                 {item}
               </button>
             );
@@ -71,14 +76,49 @@ class PatientList extends React.Component {
       </div>
     );
   }
-
+  // resp = await fetch("https://capstone-server-404.herokuapp.com/" + 'patients/login', {
+  //   method: 'POST',
+  //   mode: 'no-cors',
+  //   headers: {
+  //     Accept: 'application/json',
+  //     'content-type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //       email: 'sara@example.com',
+  //       password: 'password',
+  //   }),
+  // });
   componentDidMount() {
-    var url = new URL("https://capstone-server-404.herokuapp.com/therapists/");
-    var params = { email: "drjohn@example.com", password: "password" };
-    url.search = new URLSearchParams(params).toString();
-    fetch(url)
+    var url = new URL(
+      "https://capstone-server-404.herokuapp.com/therapists/7/patients"
+    );
+    // var params = { email: "drjohn@example.com", password: "password", password_confirmation: "password", prefix: "Dr.", first_name: "Alice", last_name: "Chan", profession: "Therapist" };
+    fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Access-Contol-Allow-Origin": "*",
+        Accept: "application/json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ token: "d313de668d" }),
+    })
       .then((response) => response.json())
-      .then((data) => console.log("This is your data", data));
+      .then((data) => console.log("This is patients", data));
+
+    // var url = new URL("https://capstone-server-404.herokuapp.com/therapists");
+    // var params = { email: "drjohn@example.com", password: "password", password_confirmation: "password", prefix: "Dr.", first_name: "Alice", last_name: "Chan", profession: "Therapist" };
+    // url.search = new URLSearchParams(params).toString();
+    // fetch(url, {
+    //   method: 'POST',
+    //   mode: 'cors',
+    //   headers: {
+    //     'Access-Contol-Allow-Origin': '*',
+    //     Accept: 'application/json',
+    //     'content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify(params),
+    // }).then((response) => response.json()).then((data) => console.log("This is your data", data))
   }
 
   onSetSidebarOpen(open) {

@@ -5,6 +5,7 @@ PatientOverview.defaultProps = {
   email: "loribarker@gmail.com",
   height: "163 cm",
   weight: "125 lbs",
+  gender: "Female",
 };
 
 function PatientOverview(props) {
@@ -18,6 +19,10 @@ function PatientOverview(props) {
           <tr>
             <td class="profileBlockLabel">Age</td>
             <td>{props.age}</td>
+          </tr>
+          <tr>
+            <td class="profileBlockLabel">Gender</td>
+            <td>{props.gender}</td>
           </tr>
           <tr>
             <td class="profileBlockLabel">Email</td>

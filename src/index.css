@@ -61,6 +61,7 @@ button {
 
 .five {
   width: 700px;
+  padding-left: 100px;
 }
 
 .patientSearchInput {
@@ -108,13 +109,19 @@ tr {
 .bigMetric {
   font-size: 54px;
   font-weight: 600;
-  margin-top: 10px;
 }
 
 .subtitle {
   color: #c4c4c4;
   font-weight: 500;
   font-size: 12px;
+  margin-top: 5px;
+}
+
+.subtitleSmall {
+  color: #c4c4c4;
+  font-weight: 400;
+  font-size: 11px;
 }
 
 .green {
@@ -125,6 +132,23 @@ tr {
   color: #fb51cb;
 }
 
+.purple {
+  color: #8976ff;
+}
+
+.lightpurple {
+  color: rgb(165, 151, 255);
+}
+.selectedButton {
+  background: #70efb9;
+  width: 210px;
+  border-radius: 12px;
+  padding-left: 5px;
+  left: -10px;
+  position: absolute;
+  padding-left: 15px;
+  font-weight: 600;
+}
 /* .background-grey {
   background-color: #F2F2F2 !important;
 } */

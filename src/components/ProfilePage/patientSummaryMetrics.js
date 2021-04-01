@@ -1,8 +1,8 @@
 import React from "react";
 
 PatientSummaryMetrics.defaultProps = {
-  anomalyCount: 17,
-  sentiment: 27.5,
+  anomalyCount: 2,
+  sentiment: 0.27,
 };
 
 function PatientSummaryMetrics(props) {
