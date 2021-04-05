@@ -1,13 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Asap", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
 }
 
-code {
+* {
+  font-family: "Asap", sans-serif;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+/* @font-face {
+  font-family: 'Asap';
+  src: local('Asap'), url(../src/styles/fonts/Asap-Regular.ttf) format('ttf');
 }
+@font-face {
+  font-family: 'Asap-Italic';
+  src: local('Asap-Italic'), url(../src/styles/fonts/Asap-Italic.ttf) format('ttf');
+} */
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0;
+  display: flex;
+}
+
+.body {
+  font-family: "Asap";
+}
+
+.sidebar {
+  list-style: none;
+  color: white;
+  height: 100%;
+}
+
+.rowOne {
+  width: 100%;
+}
+
+.one {
+  width: 260px;
+}
+.two {
+  width: 550px;
+}
+
+.three {
+  width: 250px;
+}
+
+.five {
+  width: 700px;
+  padding-left: 100px;
+}
+
+.patientSearchInput {
+  width: 85%;
+}
+
+.patientSearchInput::-moz-placeholder {
+  color: white;
+  padding: 5px;
+}
+
+.patientSearchInput::placeholder {
+  color: #c4c4c4;
+  padding: 5px;
+  /* font-family: 'Asap'; */
+}
+
+.profileBlock {
+  background-color: white;
+  padding: 13px;
+  font-size: 12px;
+  color: #484848;
+  display: inline-block;
+  height: 150px;
+}
+
+.profileBlockTitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.profileBlockLabel {
+  color: #acacac;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-right: 50px;
+  font-size: 11px;
+}
+
+tr {
+  height: 25px !important;
+}
+
+.bigMetric {
+  font-size: 54px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #c4c4c4;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.subtitleSmall {
+  color: #c4c4c4;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.green {
+  color: #3adeb7;
+}
+
+.pink {
+  color: #fb51cb;
+}
+
+.purple {
+  color: #8976ff;
+}
+
+.lightpurple {
+  color: rgb(165, 151, 255);
+}
+.selectedButton {
+  background: #70efb9;
+  width: 210px;
+  border-radius: 12px;
+  padding-left: 5px;
+  left: -10px;
+  position: absolute;
+  padding-left: 15px;
+  font-weight: 600;
+}
+/* .background-grey {
+  background-color: #F2F2F2 !important;
+} */
